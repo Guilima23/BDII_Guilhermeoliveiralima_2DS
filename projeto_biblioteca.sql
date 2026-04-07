@@ -11,18 +11,6 @@ Idade INT,
 CEP VARCHAR(10) not null
 );
 
--- Tabela Emprestimo
-CREATE TABLE Emprestimo (
-ID_emp INT PRIMARY KEY auto_increment,
-Data_inicio DATE,
-Data_prevista_entrega DATE,
-Data_atraso DATE,
-Status_ VARCHAR(20)not null,
-ID_user INT,
-ID_livro INT,
-FOREIGN KEY (ID_user) REFERENCES Usuario(ID_user),
-FOREIGN KEY (ID_livro) REFERENCES Livro(ID_livro)
-);
 
 -- Tabela Livro
 CREATE TABLE Livro (
@@ -67,19 +55,6 @@ Pais VARCHAR(50),
 Nome VARCHAR(100),
 Cidade VARCHAR(100)
 );
-CREATE TABLE Livro (
-ID_livro INT PRIMARY KEY auto_increment,
-Numero_paginas INT,
-Nome varchar(200),
-Idioma VARCHAR(50),
-Edicao VARCHAR(50),
-tipo varchar(50),
-ID_categoria INT,
-ID_editora INT,
-FOREIGN KEY (ID_categoria) REFERENCES Categoria(ID_cat),
-FOREIGN KEY (ID_editora) REFERENCES Editora(ID_edit)
-);
-
 
 -- Tabela Emprestimo
 CREATE TABLE Emprestimo (
