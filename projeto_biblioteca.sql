@@ -12,20 +12,6 @@ CEP VARCHAR(10) not null
 );
 
 
--- Tabela Livro
-CREATE TABLE Livro (
-ID_livro INT PRIMARY KEY auto_increment,
-Numero_paginas INT,
-Nome varchar(200),
-Idioma VARCHAR(50),
-Edicao VARCHAR(50),
-tipo varchar(50),
-ID_categoria INT,
-ID_editora INT,
-FOREIGN KEY (ID_categoria) REFERENCES Categoria(ID_cat),
-FOREIGN KEY (ID_editora) REFERENCES Editora(ID_edit)
-);
-
 -- Tabela Categoria
 CREATE TABLE Categoria (
 ID_cat INT PRIMARY KEY auto_increment,
